@@ -40,17 +40,13 @@ import 'package:livechat_flex/livechat_flex.dart';
 
 ```dart
 onPressed: (){
-    Livechat.beginChat(LICENSE_NO, GROUP_ID, VISITOR_NAME, VISITOR_EMAIL);
+    LivechatFlex.start_chat(LICENSE_NO, GROUP_ID, VISITOR_NAME, VISITOR_EMAIL);
     },
 ```
 
 For more info, please, refer to the `main.dart` in the example.
 
-### Views
-
-<img src="https://github.com/zfx-com/livechat_flex/raw/master/assets/1.png" width="250"><img src="https://github.com/zfx-com/livechat_flex/raw/master/assets/2.png" width="250">
-
-## 🐛 Bugs/Requests
+## Bugs/Requests
 
 If you encounter any problems feel free to open an issue. If you feel the library is
 missing a feature, please raise a ticket on Github and I'll look into it.
@@ -67,9 +63,9 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
-## 🤓 Developer(s)
+## Developer(s)
 
 
-## ⭐️ License
+## License
 
 #### <a href="https://github.com/zfx-com/livechat_flex/blob/master/LICENSE">MIT LICENSE</a>
