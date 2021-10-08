@@ -25,12 +25,11 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-    String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await LivechatFlex.platformVersion;
+      await LivechatFlex.platformVersion;
     } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
+      debugPrint('Failed to get platform version.');
     }
 
     // If the widget was removed from the tree while the asynchronous platform
@@ -70,7 +69,7 @@ class _MyAppState extends State<MyApp> {
                       ],
                       controller: licenseNoTextController,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Align(
@@ -84,7 +83,7 @@ class _MyAppState extends State<MyApp> {
                       keyboardType: TextInputType.text,
                       controller: groupIdTextController,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Align(
@@ -98,7 +97,7 @@ class _MyAppState extends State<MyApp> {
                       keyboardType: TextInputType.text,
                       controller: visitorNameTextController,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Align(
@@ -112,18 +111,20 @@ class _MyAppState extends State<MyApp> {
                       keyboardType: TextInputType.emailAddress,
                       controller: visitorEmailTextController,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    new FlatButton(
+                    TextButton(
                         onPressed: () {
-                          LivechatFlex.start_chat(licenseNoTextController.text,
+                          LivechatFlex.startChat(licenseNoTextController.text,
                               groupIdTextController.text,
-                              visitor_name: visitorNameTextController.text,
-                              visitor_email: visitorEmailTextController.text);
+                              visitorName: visitorNameTextController.text,
+                              visitorEmail: visitorEmailTextController.text);
                         },
-                        textColor: Colors.black,
-                        child: new Text(
+                        style: TextButton.styleFrom(
+                          primary: Colors.black,
+                        ),
+                        child: Text(
                           "Start Live Chat",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 20),

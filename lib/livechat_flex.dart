@@ -11,13 +11,13 @@ class LivechatFlex {
     return version;
   }
 
-  static Future<void> start_chat(String license_no, String group_id,
-      {String visitor_name, String visitor_email}) async {
+  static Future<void> startChat(String licenseNo, String groupId,
+      {String? visitorName, String? visitorEmail}) async {
     await _channel.invokeMethod('start_chat', <String, dynamic>{
-      'license_no': license_no,
-      'group_id': group_id,
-      'visitor_name': visitor_name,
-      'visitor_email': visitor_email,
+      'license_no': licenseNo,
+      'group_id': groupId,
+      'visitor_name': visitorName,
+      'visitor_email': visitorEmail,
     });
   }
 }

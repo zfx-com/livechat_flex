@@ -9,7 +9,7 @@ A livechat_flex package for embedding mobile chat window in your mobile applicat
 
 ```yaml
 dependencies:
-  livechat_flex: "^0.0.1"
+  livechat_flex: "^0.2.0"
 ```
 
 ### ⚡️ Import
